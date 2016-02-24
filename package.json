@@ -1,14 +1,11 @@
 {
   "name": "resource-collection",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Resourceful router for express simulating Rails routing functionality.",
   "main": "lib/resource-collection.js",
   "scripts": {
     "test": "mocha",
     "prepublish": "tsc"
-  },
-  "typescript": {
-    "definition": "index.d.ts"
   },
   "repository": {
     "type": "git",
@@ -19,7 +16,7 @@
     "resource",
     "router"
   ],
-  "author": "hanlin.dev@gmail.com",
+  "author": "Lin Han <hanlin.dev@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hanlindev/resourceful-router/issues"

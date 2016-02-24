@@ -16,7 +16,7 @@ declare namespace __ResourceCollection {
         delete?: ResourceActionType;
     }
 
-    declare class ActionMethod {
+    class ActionMethod {
         value: string;
         constructor(value: string);
         static ALL: ActionMethod;
@@ -82,7 +82,7 @@ declare namespace __ResourceCollection {
         };
     }
 
-    declare class ResourceCollection<ResourceActionType> {
+    class ResourceCollection<ResourceActionType> {
         globalPathPrefix: string;
         resources: {
             [key: string]: Resource<ResourceActionType>;
@@ -110,7 +110,7 @@ declare namespace __ResourceCollection {
         loadFromJson(json: any): void;
     }
 
-    declare class PathHelpers<ResourceActionType> {
+    class PathHelpers<ResourceActionType> {
         resources: ResourceCollection<ResourceActionType>;
         urlRoot: string;
         constructor(resources: ResourceCollection<ResourceActionType>, urlRoot?: string);
@@ -140,5 +140,5 @@ declare namespace __ResourceCollection {
 }
 
 declare module 'resource-collection' {
-    exports = __ResourceCollection;
+    export = __ResourceCollection;
 }
