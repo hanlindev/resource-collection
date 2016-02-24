@@ -1,0 +1,42 @@
+{
+  "name": "resourceful-router",
+  "version": "1.0.0",
+  "description": "Resourceful router for express simulating Rails routing functionality.",
+  "main": "dist/resourceful-router.js",
+  "scripts": {
+    "test": "mocha",
+    "preinstall": "npm install autodts",
+    "postinstall": "autodts link",
+    "prepublish": "tsc && autodts generate"
+  },
+  "typescript": {
+    "definition": "index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanlindev/resourceful-router.git"
+  },
+  "keywords": [
+    "express",
+    "resource",
+    "router"
+  ],
+  "author": "hanlin.dev@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hanlindev/resourceful-router/issues"
+  },
+  "homepage": "https://github.com/hanlindev/resourceful-router#readme",
+  "dependencies": {
+    "autodts": "0.0.6",
+    "chai": "^3.5.0",
+    "express": "^4.13.4",
+    "lodash": "^4.5.1",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "ts-node": "^0.5.5"
+  },
+  "devDependencies": {
+    "@lib/autodts-generator": "0.0.2"
+  }
+}
