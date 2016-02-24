@@ -140,5 +140,5 @@ declare namespace __ResourceCollection {
 }
 
 declare module 'resource-collection' {
-    exports = _Resourceful
+    exports = __ResourceCollection;
 }
