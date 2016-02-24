@@ -1,6 +1,6 @@
 {
   "name": "resource-collection",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Resourceful router for express simulating Rails routing functionality.",
   "main": "lib/resource-collection.js",
   "scripts": {
@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/hanlindev/resourceful-router#readme",
   "dependencies": {
-    "chai": "^3.5.0",
-    "lodash": "^4.5.1",
-    "mocha": "^2.4.5",
-    "sinon": "^1.17.3",
-    "ts-node": "^0.5.5"
+    "lodash": "^4.5.1"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "ts-node": "^0.5.5",
     "typescript": "^1.8.2"
   }
 }
