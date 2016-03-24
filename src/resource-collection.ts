@@ -289,6 +289,19 @@ export class PathHelpers<ResourceActionType> {
         public urlRoot: string = null
     ) {}
 
+    public regexOf(resource: string): RegExp {
+        if (!(resource in this.resources.resources)) {
+            throw new TypeError(`Resource - ${resource} not found.`);
+        }
+
+        let regexStr = '^';
+        if (!!this.resources.globalPathPrefix) {
+            regexStr += `${this.resources.globalPathPrefix}\/`;
+        }
+        regexStr += `${resource}.*`;
+        return new RegExp(regexStr);
+    }
+
     /**
      * Return the path to the specified resource action.
      * @param  {string}             resource  The name of the resource.

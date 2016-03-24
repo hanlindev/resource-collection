@@ -110,5 +110,17 @@ describe('ResourceCollection lib', () => {
                 }).to.throw();
             });
         });
+
+        describe('regexOf', () => {
+            it('returns the regex to test for resource', () => {
+                let actual = pathHelpers.regexOf('test');
+                let expected = new RegExp('^/api/test.*');
+                expect(actual).to.deep.equal(expected);
+            });
+
+            it('throws TypeError if resource is not found', () => {
+                expect(() => {pathHelpers.regexOf('not_found');}).to.throw();
+            });
+        });
     });
 })

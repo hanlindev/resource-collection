@@ -114,6 +114,7 @@ declare namespace __ResourceCollection {
         resources: ResourceCollection<ResourceActionType>;
         urlRoot: string;
         constructor(resources: ResourceCollection<ResourceActionType>, urlRoot?: string);
+        regexOf(resource: string): RegExp;
         /**
          * Return the path to the specified resource action.
          * @param  {string}             resource  The name of the resource.
