@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanlindev/resourceful-router.git"
+    "url": "git+https://github.com/hanlindev/resource-collection.git"
   },
   "keywords": [
     "express",

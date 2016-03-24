@@ -17,6 +17,9 @@
     },
     "files": [
         "./src/resource-collection.ts",
+        "./src/test/helpers/test-controller-module.ts",
+        "./src/test/resource-collection-spec.ts",
+        "./src/test/utils-spec.ts",
         "./src/utils.ts",
         "./typings/main.d.ts"
     ]

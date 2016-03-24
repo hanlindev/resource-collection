@@ -1,5 +1,1 @@
- -w
- --watch-extensions ts
- ./test/**/*.ts
- --require ts-node/register
- ./test/test-helpers.js
+ ./lib/test/**/*.js

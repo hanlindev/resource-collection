@@ -1,7 +1,7 @@
 import * as express from 'express';
 import {expect} from 'chai';
 import * as sinon from 'sinon';
-import {ResourceCollection, PathHelpers, ActionMethod, ResourceAction} from '../../src/resource-collection';
+import {ResourceCollection, PathHelpers, ActionMethod, ResourceAction} from '../resource-collection';
 import * as testControllerModule from './helpers/test-controller-module';
 
 describe('ResourceCollection lib', () => {

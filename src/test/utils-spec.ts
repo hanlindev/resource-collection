@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import * as utils from '../../src/utils';
+import * as utils from '../utils';
 
 describe('fillString', () => {
     it('replaces :<param> with arguments', () => {
