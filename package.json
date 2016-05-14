@@ -1,6 +1,6 @@
 {
   "name": "resource-collection",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Resourceful router for express simulating Rails routing functionality.",
   "main": "lib/resource-collection.js",
   "scripts": {

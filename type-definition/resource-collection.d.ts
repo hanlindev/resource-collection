@@ -97,7 +97,7 @@ declare namespace __ResourceCollection {
          * @param  {ResourceEndpoint[]} extra          non-restful endpoints.
          * @return {void}
          */
-        resource(name: string, resourceModule: ResourceModule<ResourceActionType>, extra?: ResourceEndpoint[]): void;
+        resource(name: string, resourceModule?: ResourceModule<ResourceActionType>, extra?: ResourceEndpoint[]): void;
         registerResourceModule(name: string, resourceModule: ResourceModule<ResourceActionType>): void;
         hasAction(resourceName: string, actionName: string): boolean;
         toJson(): any;
