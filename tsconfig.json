@@ -8,7 +8,7 @@
     },
     "filesGlob": [
         "./src/**/*.ts",
-        "./typings/main.d.ts",
+        "./typings/index.d.ts",
         "./custom_typings/**/*.d.ts"
     ],
     "compileOnSave": true,
@@ -21,6 +21,6 @@
         "./src/test/resource-collection-spec.ts",
         "./src/test/utils-spec.ts",
         "./src/utils.ts",
-        "./typings/main.d.ts"
+        "./typings/index.d.ts"
     ]
 }

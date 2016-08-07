@@ -115,7 +115,7 @@ export class ActionMethod {
     }, {
       method: ActionMethod.DELETE,
       path: '/:id',
-      name: 'delete'
+      name: 'destroy'
     }
   ];
 
