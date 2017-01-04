@@ -82,6 +82,11 @@ declare namespace __ResourceCollection {
         };
     }
 
+    interface ResourceCollectionJson {
+      globalPathPrefix: string;
+      paths : {[key: string]: SerializedResource};
+    }
+
     class ResourceCollection<ResourceActionType> {
         globalPathPrefix: string;
         resources: {
@@ -100,14 +105,14 @@ declare namespace __ResourceCollection {
         resource(name: string, resourceModule?: ResourceModule<ResourceActionType>, extra?: ResourceEndpoint[]): void;
         registerResourceModule(name: string, resourceModule: ResourceModule<ResourceActionType>): void;
         hasAction(resourceName: string, actionName: string): boolean;
-        toJson(): any;
+        toJson(): ResourceCollectionJson;
         /**
          * Restore the endpoints in the serialied ResourceCollection json instance.
          * @param {SerializedResource|string}} json The serialized
          *                                          ResourceCollection instance from
          *                                          toJson method.
          */
-        loadFromJson(json: any): void;
+        loadFromJson(json: ResourceCollectionJson): void;
     }
 
     class PathHelpers<ResourceActionType> {

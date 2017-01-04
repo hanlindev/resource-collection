@@ -5,6 +5,8 @@ import {fillString, getStringParams, buildQueryString} from './utils';
 export type ResourceAction = Function;
 // export type ResourceAction = (res: express.Request, req: express.Response) => void;
 
+// ResourceActionType is the type of the request handler. For example, it can
+// be the function signature of an ExpressJS request handler.
 export interface ResourceModule<ResourceActionType> {
   name: string;
   pathPrefix?: string;
@@ -147,6 +149,11 @@ export class ActionMethod {
     endpoints: {[key: string]: SerializedResourceEndpoint};
   }
 
+  export interface ResourceCollectionJson {
+    globalPathPrefix: string;
+    paths : {[key: string]: SerializedResource};
+  }
+
   export class ResourceCollection<ResourceActionType> {
     public resources: {[key: string]: Resource<ResourceActionType>} = {};
 
@@ -210,9 +217,10 @@ export class ActionMethod {
       return true;
     }
 
-    toJson(): any {
-      let result: {[key: string]: SerializedResource|string} = {
-        globalPathPrefix: this.globalPathPrefix
+    toJson(): ResourceCollectionJson {
+      let result = {
+        globalPathPrefix: this.globalPathPrefix,
+        paths: {} as {[key: string]: SerializedResource}
       };
       for (let resourceName in this.resources) {
         let resource = this.resources[resourceName];
@@ -236,7 +244,7 @@ export class ActionMethod {
             path: endpoint.path
           }
         }
-        result[resourceName] = serialized;
+        result.paths[resourceName] = serialized;
       }
 
       return result;
@@ -249,13 +257,11 @@ export class ActionMethod {
     *                                          toJson method.
     */
     loadFromJson(
-      json: any
+      json: ResourceCollectionJson
     ): void {
-      json = <{[key: string]: SerializedResource|string}> json;
-      this.globalPathPrefix = <string> json['globalPathPrefix'];
-      delete json['globalPathPrefix'];
-      for (let resourceName in json) {
-        let serialized = <SerializedResource> json[resourceName];
+      this.globalPathPrefix = json.globalPathPrefix;
+      for (let resourceName in json.paths) {
+        let serialized = json.paths[resourceName];
         let serializedHandler = serialized.handler;
         let serializedEndpoints = serialized.endpoints;
 
