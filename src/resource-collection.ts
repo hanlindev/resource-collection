@@ -183,7 +183,7 @@ export class ActionMethod {
       extra: ResourceEndpoint[] = []
     ): void {
       let endpoints: {[key: string]: ResourceEndpoint} = {};
-      for (let endpoint of defaultEndpoints.concat(extra)) {
+      for (let endpoint of [...extra, ...defaultEndpoints]) {
         if (!resourceModule || endpoint.name in resourceModule) {
           endpoints[endpoint.name] = endpoint;
         }
