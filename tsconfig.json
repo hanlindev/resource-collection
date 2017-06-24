@@ -1,26 +1,27 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "noImplicitAny": false,
-        "moduleResolution": "node",
-        "outDir": "lib"
-    },
-    "filesGlob": [
-        "./src/**/*.ts",
-        "./typings/index.d.ts",
-        "./custom_typings/**/*.d.ts"
-    ],
-    "compileOnSave": true,
-    "atom": {
-        "rewriteTsconfig": true
-    },
-    "files": [
-        "./src/resource-collection.ts",
-        "./src/test/helpers/test-controller-module.ts",
-        "./src/test/resource-collection-spec.ts",
-        "./src/test/utils-spec.ts",
-        "./src/utils.ts",
-        "./typings/index.d.ts"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "outDir": "lib",
+    "declaration": true
+  },
+  "filesGlob": [
+    "./src/**/*.ts",
+    "./typings/index.d.ts",
+    "./custom_typings/**/*.d.ts"
+  ],
+  "compileOnSave": true,
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "files": [
+    "./src/resource-collection.ts",
+    "./src/test/helpers/test-controller-module.ts",
+    "./src/test/resource-collection-spec.ts",
+    "./src/test/utils-spec.ts",
+    "./src/utils.ts",
+    "./typings/index.d.ts"
+  ]
 }

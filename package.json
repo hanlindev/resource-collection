@@ -1,6 +1,6 @@
 {
   "name": "resource-collection",
-  "version": "1.4.0",
+  "version": "1.5.2",
   "description": "Resourceful router for express simulating Rails routing functionality.",
   "main": "lib/resource-collection.js",
   "scripts": {
@@ -31,5 +31,6 @@
     "sinon": "^1.17.3",
     "ts-node": "^0.5.5",
     "typescript": "^1.8.2"
-  }
+  },
+  "types": "lib/resource-collection.d.ts"
 }

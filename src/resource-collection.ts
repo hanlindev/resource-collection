@@ -10,6 +10,7 @@ export type ResourceAction = Function;
 export interface ResourceModule<ResourceActionType> {
   name: string;
   pathPrefix?: string;
+  extraActions?: {[name: string]: ResourceEndpoint};
   index?: ResourceActionType;
   new?: ResourceActionType;
   new_?: ResourceActionType; // for ES6 syntax module export
